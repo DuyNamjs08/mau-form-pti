@@ -1,0 +1,52 @@
+.card-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:  100%; 
+  background: rgba(0, 0, 0, 0.639);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card-main {
+    position: absolute;
+    top: 0 ;
+    z-index: 9999;
+    width: 80vw;
+    height: 100%;
+    background: #fff;
+    padding: 0 !important;
+    margin: 0 !important;
+    .card-header {
+      height: 50px;
+      background-color: dodgerblue;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      color: #fff;
+      p {
+        font-size: 18px;
+      }
+      .fa-xmark {
+        cursor: pointer;
+        font-size: 20px;
+        &:hover {
+          color: #e74c3c;
+        }
+      }
+    }
+    .card-main-contents{
+      height: calc(100vh - 50px);
+      overflow-y: scroll !important;
+      scroll-behavior: smooth !important;
+      &::-webkit-scrollbar{
+        display: none;
+      }
+      .link-active{
+        color: #e74c3c;
+      }
+    }
+  }
+}
